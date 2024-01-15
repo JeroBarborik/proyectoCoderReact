@@ -1,0 +1,36 @@
+
+.NavBar {
+  background: linear-gradient(to right, #3498db, #a302ee); /* Fondo degradado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.NavBar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.NavBar a:hover {
+  border-bottom: 2px solid white; /* Subrayado al pasar el mouse sobre los enlaces */
+}
+
+.NavBar button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.NavBar button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
