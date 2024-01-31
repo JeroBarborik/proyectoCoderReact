@@ -1,0 +1,65 @@
+.CardItem {
+    margin: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    width: auto; /* Ajusta el tamaño según sea necesario */
+    box-shadow: black;
+    background-color: white; /* Fondo blanco por defecto */
+    transition: background-color 0.3s ease; /* Transición suave */
+   height: auto;
+}
+
+.CardItem:hover {
+    background-color: #3498db; /* Cambio a celeste al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.Header {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.ItemHeader {
+    font-size: 1.5em;
+}
+.ItemHeader:hover {
+    color: white;
+}
+
+.ItemImg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 5px;
+}
+
+.Info {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    padding: 0px;
+}
+
+.ItemFooter {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.ItemFooter a {
+    text-decoration: none;
+    color: #3498db;
+    background-color: #ffffffc9;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ItemFooter a:hover {
+    background-color: #3498db;
+    cursor: pointer;
+    color: white;
+}
+
+

@@ -1,0 +1,14 @@
+.ListGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Cambia de 'center' a 'flex-start' */
+    background-color: white;
+    height: max-content;
+}
+
+.ListGroup > * {
+    flex: 0 1 auto; /* Ajusta el tamaño de las tarjetas para que no se contraigan */
+    margin: 10px; /* Añade margen entre las tarjetas */
+    min-width: 400px; /* Define un ancho mínimo para cada tarjeta */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}

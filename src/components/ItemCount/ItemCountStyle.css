@@ -1,0 +1,54 @@
+.Counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .Controls {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Button {
+    background-color: transparent;
+    border: none;
+    color: #072d7eac;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .Button:hover {
+    background-color: rgba(52, 152, 219, 0.2);
+    border-radius: 5px;
+  }
+  
+  .Number {
+    font-size: 18px;
+    margin: 0 10px;
+    color: black;
+  }
+  
+  .AddToCartButton {
+    background-color: #ffffffb5;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .AddToCartButton:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  .AddToCartButton:hover {
+    background-color: #2980b9;
+    border-radius: 5px;
+  }

@@ -1,0 +1,35 @@
+.NavBar {
+  background: linear-gradient(to right, #000b13, #024d586e);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavBar h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #fff;
+}
+
+.Categories {
+  display: flex;
+  align-items: center;
+}
+.Option {
+  margin-right: 60px;
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.ActiveOption {
+  margin-right: 60px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 28px;
+  border-radius: 5px;
+}
+.Carrito{
+  color: white;
+}
