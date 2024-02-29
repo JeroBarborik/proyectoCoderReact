@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
-import "./itemStyled.css";
+import './itemStyled.css';
+
 
 
 
@@ -19,10 +20,10 @@ const Item = ({id, name, img, price, stock}) => {
 
         <section>
                <p className="Info">
-                  Precio: {price}
+                  ${price}
                </p>
                <p className="Info">
-                  Stock disponible: {stock}
+                  Stock: {stock}
                </p>
         </section>
 
@@ -38,7 +39,7 @@ const Item = ({id, name, img, price, stock}) => {
 
     )
 
-
+    
 }
 
 export default Item 

@@ -1,0 +1,34 @@
+.CartContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .CartItems {
+    margin-bottom: 20px;
+  }
+  
+  .CartTotal {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .Button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .Option {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px ;
+ }
+  

@@ -1,28 +1,54 @@
 import { useEffect, useState } from "react";
-import { getProducts, getProductByCategory } from "../../asyncMock";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../service/firebase/firebaseConfig"; 
+
+
+
 const ItemListContainer = ({greeting}) => {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const { categoryId } = useParams();
 
-    const [products, setProducts] = useState([])
+    useEffect(() => {
+        setLoading(true);
+        const collectionRef = categoryId
+            ? query(collection(db, "productos"), where("category", "==", categoryId))
+            : collection(db, "productos");
     
-    const {categoryId} = useParams()
-
-     useEffect(()=> {
-      const asyncFunc = categoryId ? getProductByCategory : getProducts;
-         asyncFunc(categoryId)
-         .then(response => {setProducts(response)})
-         .catch(error => {console.error(error) })
-    }, [categoryId]
-    );
+        getDocs(collectionRef)
+            .then(response => {
+                const productsAdapted = response.docs.map(doc => {
+                    const data = doc.data()
+                    return { id: doc.id, ...data }
+                });
+          
+                setProducts(productsAdapted);
+                console.log("Objetos devueltos por la consulta:", productsAdapted); 
+            })
+            .catch(error => {
+                console.log("Error al obtener los productos:", error); 
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    }, [categoryId]); 
     
-    return (
-      <div>
-          <ItemList products={products}/>
-      </div>
-    )
-  }
   
-  export default ItemListContainer
+    return (
+        <div>
+            {loading ? (
+                <p>Cargando productos...</p>
+            ) : (
+                <ItemList data={products} />
+            )}
+        </div>
+    );
+};
+
+export default ItemListContainer;
+
+  
   
   

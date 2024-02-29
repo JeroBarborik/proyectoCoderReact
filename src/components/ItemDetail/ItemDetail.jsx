@@ -1,41 +1,49 @@
+import { useContext, useState } from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import './ItemDetail.css'; 
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext"; 
+import './ItemDetail.css';
 
-const ItemDetail = ({id, name, img, price, stock, description, category}) => {
-  return (
-    <article className="CardItem">
-       <header className="Header"> 
-         <h2 className="ItemHeader"> {name} </h2>
-       </header>
+const ItemDetail = ({ product }) => {
+    const [quantityAdded, setQuantityAdded] = useState(0);
+    const { addItem } = useContext(CartContext);
 
-       <picture>
-        <img src={img} alt={name} className="ItemImg" />
-       </picture>
-       
-       <section>
-        <p className="Info">
-            Categoria: {category}
-        </p>
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity);
+        const item = { ...product };
+        console.log("Producto agregado al carrito:", item, "Cantidad:", quantity);
+        addItem(item, quantity);
+    };
 
-        <p className="Info">
-            Descripcion: {description}
-        </p>
+    return (
+        <article className="CardItem">
+            {product ? (
+                <>
+                    <header className="Header"> 
+                        <h2 className="ItemHeader">{product.name}</h2>
+                    </header>
+                    <picture>
+                        <img src={product.img} alt={product.name} className="ItemImg" />
+                    </picture>
+                    <section>
+                        <p className="Info">Categoria: {product.category}</p>
+                        <p className="Info">Descripcion: {product.description}</p>
+                        <p className="Info">${product.price}</p>
+                    </section>
+                    <footer className="ItemFooter">
+                        {quantityAdded > 0 ? (
+                            <Link to='/cart' className="Option">Terminar compra</Link>
+                        ) : (
+                            <ItemCount initial={1} stock={product.stock} onAdd={handleOnAdd} />
+                        )}
+                    </footer>
+                </>
+            ) : (
+                <p>No se ha cargado ningún producto.</p>
+            )}
+        </article>
+    );
+};
 
-        <p className="Info">
-            Precio: {price}
-        </p>
-       </section>
-        
-        <footer className="ItemFooter">
-            <ItemCount initial={1} stock={stock} onAdd={(quantity)=>console.log("Cantidad agregada", quantity)} />
-        </footer>
+export default ItemDetail;
 
-
-
-
-
-    </article>
-  )
-}
-
-export default ItemDetail

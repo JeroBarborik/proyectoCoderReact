@@ -1,45 +1,38 @@
 .CardItem {
-    margin: 60px;
-    padding: 20px;
+    margin: 10px; /* Reducir el margen para que los elementos estén más cerca */
+    padding: 10px; /* Reducir el padding para que los elementos sean más compactos */
     border-radius: 10px;
-    width: auto; /* Ajusta el tamaño según sea necesario */
-    box-shadow: black;
-    background-color: white; /* Fondo blanco por defecto */
-    transition: background-color 0.3s ease; /* Transición suave */
-   height: auto;
+    width: 200px; /* Ancho fijo para cada elemento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra suave */
+    background-color: white;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* Hacer que los elementos se muestren en línea */
+    vertical-align: top; /* Alinear elementos superiormente */
 }
 
 .CardItem:hover {
-    background-color: #3498db; /* Cambio a celeste al pasar el mouse */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    background-color: #01434d;
 }
 
 .Header {
     text-align: center;
-    margin-bottom: 15px;
-    color: #3498db;
-}
-
-.ItemHeader {
-    font-size: 1.5em;
-}
-.ItemHeader:hover {
-    color: white;
+    margin-bottom: 10px;
+    color: #01434d;
+    font-size: 1.2em; /* Reducir el tamaño de la fuente del encabezado */
 }
 
 .ItemImg {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añadir sombra suave a la imagen */
 }
 
 .Info {
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1em; /* Reducir el tamaño de la fuente de la información */
     color: black;
     text-align: center;
-    padding: 0px;
 }
 
 .ItemFooter {
@@ -49,7 +42,7 @@
 
 .ItemFooter a {
     text-decoration: none;
-    color: #3498db;
+    color: #000000;
     background-color: #ffffffc9;
     padding: 5px 10px;
     border-radius: 5px;
@@ -58,8 +51,5 @@
 
 .ItemFooter a:hover {
     background-color: #3498db;
-    cursor: pointer;
     color: white;
 }
-
-

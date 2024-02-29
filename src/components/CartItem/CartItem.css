@@ -1,0 +1,40 @@
+.CartItem {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  .CartItem h3 {
+  color: aliceblue};
+  
+  
+  .CartItemDetails {
+    flex: 1;
+  }
+  
+  .CartItemDetails h3 {
+    color: aliceblue;
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .CartItemDetails p {
+    margin: 5px 0;
+    color: aliceblue;
+    font-size: 16px;
+  }
+  
+  .CartItemActions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .RemoveButton {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  

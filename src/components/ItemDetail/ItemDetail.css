@@ -11,7 +11,13 @@
     margin: 10px;
     
 }
+.CardItem :hover {
+    .Info{
+        color: white;
+    }
+    
 
+}
 .Header {
     text-align: center;
     margin-bottom: 10px;
@@ -30,11 +36,7 @@
 
 .Info {
     margin-bottom: 10px;
-   
+   color: #01434d;
 }
 
-.ItemFooter {
-    margin-top: auto; /* Coloca el footer abajo */
-    margin-bottom: 10px;
-    color: rgb(186, 253, 0);
-}
+
